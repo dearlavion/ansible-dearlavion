@@ -1,0 +1,10 @@
+---
+- name: Write a simple file
+  hosts: postPilot-001
+  gather_facts: false
+  tasks:
+    - name: Write file test.txt to temp directory
+      ansible.builtin.lineinfile:
+        path: /tmp/test.txt
+        line:  Hello World Post Pilot is here!!!
+        create:  true
